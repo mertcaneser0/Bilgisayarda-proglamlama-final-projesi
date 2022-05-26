@@ -10,3 +10,24 @@ def showMenu():
         print("3) Öğrenci sil")
         print("4) Öğrenci bilgilerini güncelle")
         print("5) Tüm öğrencileri görüntüle")
+secim = input("Seçim yap: ")
+        if secim == "q" or secim == "exit": #yukarıda gösterilen sayılar yerine 'q' ya da 'exit' girilirse sistemden çıkmasını sağlar 
+            exit(0)
+
+        secim = int(secim)
+
+        if secim == 1:              # shell'e 1 girildiği zaman eklenilmek istenen öğrenci hakkında sorular sorar.
+            ad = input("Adı: ")
+            soyad = input("Soyad: ")
+            sehir = input("Yaşadığı şehir: ")
+            okul = input("Bölümü: ")
+            dogum = int(input("Doğum yılı: "))
+            mail = input("Mail adresi: ")
+            tel = input("Telefon numarası: ")
+            egitim = []
+            while True:
+                egt = input("Aldığı dersler: ")
+                if egt == "":
+                    break
+                egitim.append(egt)
+                #Aldığı dersler sorusunu sonlandırmak için kutucuğu boş bırakıp enter tuşuna basmak gerekiyor.
