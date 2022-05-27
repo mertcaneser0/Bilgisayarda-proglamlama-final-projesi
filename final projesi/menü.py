@@ -33,3 +33,9 @@ secim = input("Seçim yap: ")
                 #Aldığı dersler sorusunu sonlandırmak için kutucuğu boş bırakıp enter tuşuna basmak gerekiyor.
             ogrenci = {"dogum_tarihi": dogum, "egitim": egitim, "okul": okul, "soyadi": soyad,
                        "sehir": sehir, "tel": tel, "adi": ad, "mail": mail}
+
+
+            std = Student()
+            std.addStudent(ogrenci)   
+            print("#"*5,"Öğrenci Eklendi", "#"*5) #Bilgileri girilen öğrencinin kayıt edilmesini sağlar
+            showMenu()  #İşlemler bittikten sonra giriş menüsüne geri dönülmesini sağlar
