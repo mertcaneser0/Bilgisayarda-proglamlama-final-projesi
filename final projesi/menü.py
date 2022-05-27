@@ -3,7 +3,7 @@ from Student import Student
 def showMenu():
     #try: Hataları denetler.
     try:
-        print("Uludağ Üniversitesi öğrenci tanıma sistemine hoşgeldiniz")
+        print("ULUDAĞ ÜNİVERSİTESİ ÖĞRENCİ TANIMA SİSTEMİNE HOŞGELDİNİZ")
         print("\n","#"*5, "Seçim Yapın", "#"*5)
         print("1) Öğrenci ekle")
         print("2) Öğrenci bul")
@@ -31,3 +31,5 @@ secim = input("Seçim yap: ")
                     break
                 egitim.append(egt)
                 #Aldığı dersler sorusunu sonlandırmak için kutucuğu boş bırakıp enter tuşuna basmak gerekiyor.
+ogrenci = {"dogum_tarihi": dogum, "egitim": egitim, "okul": okul, "soyadi": soyad,
+                       "sehir": sehir, "tel": tel, "adi": ad, "mail": mail}
