@@ -31,5 +31,5 @@ secim = input("Seçim yap: ")
                     break
                 egitim.append(egt)
                 #Aldığı dersler sorusunu sonlandırmak için kutucuğu boş bırakıp enter tuşuna basmak gerekiyor.
-ogrenci = {"dogum_tarihi": dogum, "egitim": egitim, "okul": okul, "soyadi": soyad,
+            ogrenci = {"dogum_tarihi": dogum, "egitim": egitim, "okul": okul, "soyadi": soyad,
                        "sehir": sehir, "tel": tel, "adi": ad, "mail": mail}
