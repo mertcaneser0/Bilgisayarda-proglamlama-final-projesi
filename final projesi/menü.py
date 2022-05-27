@@ -39,3 +39,11 @@ secim = input("Seçim yap: ")
             std.addStudent(ogrenci)   
             print("#"*5,"Öğrenci Eklendi", "#"*5) #Bilgileri girilen öğrencinin kayıt edilmesini sağlar
             showMenu()  #İşlemler bittikten sonra giriş menüsüne geri dönülmesini sağlar
+
+elif secim == 2:
+            ad = input("Aradığınız öğrencinin adı: ")
+            soyad = input("Aradığınız öğrencinin soyadı: ")
+
+            std = Student()
+            std.viewStudent(ad,soyad) #adı ve soyadı girilen öğrencinin tüm bilgilerinin gösterilmesini sağlar
+            showMenu()            
