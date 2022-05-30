@@ -47,3 +47,23 @@ elif secim == 2:
             std = Student()
             std.viewStudent(ad,soyad) #adı ve soyadı girilen öğrencinin tüm bilgilerinin gösterilmesini sağlar
             showMenu()            
+elif secim == 3:
+            ad = input("Silinecek öğrencinin adı: ")
+            soyad = input("Silinecek öğrencinin soyadı: ")
+
+            std = Student()
+            std.deleteStudent(ad,soyad)
+            print("#"*5,"Öğrenci silindi", "#"*5)
+            showMenu()
+        elif secim == 4:
+            print("\nGüncellenecek öğrencinin bilgilerini girin.")
+
+            ad = input("Adı: ")
+            soyad = input("Soyad: ")
+
+            sehir = input("\nYaşadığın şehir: ")
+            okul = input("Okulun: ")
+            dogum = int(input("Doğum yılı: "))
+            mail = input("Mail adresi: ")
+            tel = input("Telefon numarası: ")
+            egitim = []
