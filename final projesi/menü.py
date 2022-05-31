@@ -67,3 +67,13 @@ elif secim == 3:
             mail = input("Mail adresi: ")
             tel = input("Telefon numarası: ")
             egitim = []
+
+  while True:
+                egt = input("Aldığı dersler: ")
+                if egt == "": #boş bir şekilde enter tuşuna basılırsa aldığı dersler sorusunu sonlandırır
+                    break
+                egitim.append(egt)
+
+            ogrenci = {"dogum_tarihi": dogum, "egitim": egitim, "okul": okul, "soyadi": soyad,
+                       "sehir": sehir, "tel": tel, "adi": ad, "mail": mail}
+           
