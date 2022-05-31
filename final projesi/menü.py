@@ -52,10 +52,10 @@ elif secim == 3:
             soyad = input("Silinecek öğrencinin soyadı: ")
 
             std = Student()
-            std.deleteStudent(ad,soyad)
+            std.deleteStudent(ad,soyad) #kayıtlı öğrencinin silinmesini sağlar
             print("#"*5,"Öğrenci silindi", "#"*5)
             showMenu()
-        elif secim == 4:
+        elif secim == 4: #güncellenmek istenen öğrencinin adı ve soyadını sorar
             print("\nGüncellenecek öğrencinin bilgilerini girin.")
 
             ad = input("Adı: ")
