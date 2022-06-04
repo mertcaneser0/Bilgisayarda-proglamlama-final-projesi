@@ -76,4 +76,20 @@ elif secim == 3:
 
             ogrenci = {"dogum_tarihi": dogum, "egitim": egitim, "okul": okul, "soyadi": soyad,
                        "sehir": sehir, "tel": tel, "adi": ad, "mail": mail}
+            
+
+            std = Student()
+            std.updateStudent(ad,soyad, ogrenci)
+            print("#" * 5, "Öğrenci güncellendi", "#" * 5)
+            showMenu()
+        elif secim == 5:
+            std = Student()
+            std.allStudent()
+            showMenu()
+        else:
+            print("#"*5,"Geçersiz işlem","#"*5)
+    except Exception as h:
+        print("#"*5,"Sayı gir.","#"*5)
+
+showMenu()            
            
