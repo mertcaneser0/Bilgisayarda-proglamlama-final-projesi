@@ -13,7 +13,7 @@ class Student:
         # Json formatındaki veriyi sözlüğe çevirir.
         self.count = 0
         null = {}
-try:
+        try:
             for i in json.loads(data).keys():
                 if int(i) > self.count:
                     self.count = int(i)
@@ -31,7 +31,7 @@ try:
             return data
         except FileNotFoundError:
             return None
-        def writeFile(self, data, filePath):
+   def writeFile(self, data, filePath):
         # Dosyayı oluşturup içine veri yazacak.
         with open(filePath, "w") as f:
             f.write(data)
@@ -43,4 +43,4 @@ try:
             lastDict = self.jsonToDict(lastData)
         lastDict[self.count] = dct
         newJson = self.dictToJson(lastDict)
-        self.writeFile(newJson, "stdData.json")
+        self.writeFile(newJson, "stdData.json")         
