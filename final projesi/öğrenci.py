@@ -31,3 +31,16 @@ try:
             return data
         except FileNotFoundError:
             return None
+        def writeFile(self, data, filePath):
+        # Dosyayı oluşturup içine veri yazacak.
+        with open(filePath, "w") as f:
+            f.write(data)
+
+    def addStudent(self, dct):
+        lastDict = {}
+        lastData = self.readFile("stdData.json")
+        if lastData:
+            lastDict = self.jsonToDict(lastData)
+        lastDict[self.count] = dct
+        newJson = self.dictToJson(lastDict)
+        self.writeFile(newJson, "stdData.json")
