@@ -31,7 +31,7 @@ class Student:
             return data
         except FileNotFoundError:
             return None
-   def writeFile(self, data, filePath):
+    def writeFile(self, data, filePath):
         # Dosyayı oluşturup içine veri yazacak.
         with open(filePath, "w") as f:
             f.write(data)
@@ -44,7 +44,7 @@ class Student:
         lastDict[self.count] = dct
         newJson = self.dictToJson(lastDict)
         self.writeFile(newJson, "stdData.json")         
- def deleteStudent(self, name, surname):
+    def deleteStudent(self, name, surname):
         readData = self.readFile("stdData.json")
         jsonData = self.jsonToDict(readData)
         for i in jsonData.keys():
