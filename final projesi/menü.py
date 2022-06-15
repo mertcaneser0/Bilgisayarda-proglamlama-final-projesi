@@ -10,7 +10,8 @@ def showMenu():
         print("3) Öğrenci sil")
         print("4) Öğrenci bilgilerini güncelle")
         print("5) Tüm öğrencileri görüntüle")
-secim = input("Seçim yap: ")
+        
+        secim = input("Seçim yap: ")
         if secim == "q" or secim == "exit": #yukarıda gösterilen sayılar yerine 'q' ya da 'exit' girilirse sistemden çıkmasını sağlar 
             exit(0)
 
@@ -40,14 +41,14 @@ secim = input("Seçim yap: ")
             print("#"*5,"Öğrenci Eklendi", "#"*5) #Bilgileri girilen öğrencinin kayıt edilmesini sağlar
             showMenu()  #İşlemler bittikten sonra giriş menüsüne geri dönülmesini sağlar
 
-elif secim == 2:
+        elif secim == 2:
             ad = input("Aradığınız öğrencinin adı: ")
             soyad = input("Aradığınız öğrencinin soyadı: ")
 
             std = Student()
             std.viewStudent(ad,soyad) #adı ve soyadı girilen öğrencinin tüm bilgilerinin gösterilmesini sağlar
             showMenu()            
-elif secim == 3:
+        elif secim == 3:
             ad = input("Silinecek öğrencinin adı: ")
             soyad = input("Silinecek öğrencinin soyadı: ")
 
@@ -68,7 +69,7 @@ elif secim == 3:
             tel = input("Telefon numarası: ")
             egitim = []
 
-  while True:
+            while True:
                 egt = input("Aldığı dersler: ")
                 if egt == "": #boş bir şekilde enter tuşuna basılırsa aldığı dersler sorusunu sonlandırır
                     break
