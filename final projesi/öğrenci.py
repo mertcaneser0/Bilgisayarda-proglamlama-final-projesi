@@ -67,3 +67,18 @@ class Student:
                 for a in range(len(jsonData[i]["egitim"])):
                     print("Eğitim:",jsonData[i]["egitim"][a])
                 break
+       
+            else:
+                continue
+
+    def updateStudent(self,name, surname, data):
+        readData = self.readFile("stdData.json")
+        jsonData = self.jsonToDict(readData)
+        for i in jsonData.keys():
+            if jsonData[i]["adi"].lower() == name.lower() and jsonData[i]["soyadi"].lower() == surname.lower():
+                jsonData[i] = data
+                break
+            else:
+                continue
+        dictData = self.dictToJson(jsonData)
+        self.writeFile(dictData, "stdData.json")   
