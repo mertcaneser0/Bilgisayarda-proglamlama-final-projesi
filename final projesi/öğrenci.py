@@ -81,4 +81,16 @@ class Student:
             else:
                 continue
         dictData = self.dictToJson(jsonData)
-        self.writeFile(dictData, "stdData.json")   
+        self.writeFile(dictData, "stdData.json") 
+        
+    def allStudent(self):
+        readData = self.readFile("stdData.json")
+        jsonData = self.jsonToDict(readData)
+        for i in jsonData.keys():
+            print("\n","#" * 40)
+            print("Adı:", jsonData[i]["adi"], "\nSoyadı:", jsonData[i]["soyadi"], "\nYaşadığı Şehit:",
+                  jsonData[i]["sehir"],
+                  "\nOkul:", jsonData[i]["okul"], "\nMail:", jsonData[i]["mail"], "\nTelefon:", jsonData[i]["tel"],
+                  "\nDoğum Tarihi:", jsonData[i]["dogum_tarihi"])
+            for a in range(len(jsonData[i]["egitim"])):
+                print("Eğitim:", jsonData[i]["egitim"][a])        
